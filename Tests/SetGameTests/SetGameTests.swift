@@ -95,14 +95,10 @@ final class SetDetectorTests: XCTestCase {
         }
     }
     
-    func testSetGameCount() {
-        XCTAssertEqual(SetGame().deck.count, 81)
-    }
-    
     func testDiscoverSets() {
         let sd = SetGame()
         sd.setTableSet(testTableSet)
-        XCTAssertEqual(sd.discoverSetsOnTable(),expectedDiscoveredSets)
+        XCTAssertEqual(sd.discoverSetsOnTable(), expectedDiscoveredSets)
     }
     
     func testSetGameDeal() {
@@ -115,7 +111,6 @@ final class SetDetectorTests: XCTestCase {
     static var allTests = [
         ("testIsSet", testIsSet),
         ("testIsNotSet", testIsNotSet),
-        ("testSetGameCount",testSetGameCount),
         ("testSetGameDeal", testSetGameDeal),
         ("testDiscoverSets", testDiscoverSets)
     ]

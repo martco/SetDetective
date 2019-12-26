@@ -25,6 +25,7 @@ class SetGame {
     }
     
     func deal() {
+        if deck.count == 0 { populateDeck() }
         setTableSet(Array(deck.prefix(tableSetSize)))
         deck.removeFirst(tableSetSize)
     }
@@ -39,6 +40,7 @@ class SetGame {
                 let k = j + 1
                 
                 for k in k..<tableSet.count {
+                    print("check", i, j, k)
                     let possibleSet = [tableSet[i],tableSet[j],tableSet[k]]
                     if setDetector.isSet(possibleSet) {
                         discoveredSets.append(possibleSet)
@@ -51,11 +53,8 @@ class SetGame {
         return discoveredSets
                             
     }
-   
-    init() {
-        self.deck = []
-        self.tableSet = []
-        
+    
+    func populateDeck() {
         shadings.forEach { sh in
             colors.forEach { c in
                 numbers.forEach { n in
@@ -65,5 +64,10 @@ class SetGame {
                 }
             }
         }
+    }
+   
+    init() {
+        self.deck = []
+        self.tableSet = []
     }
 }
