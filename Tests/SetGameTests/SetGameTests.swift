@@ -97,12 +97,11 @@ final class SetDetectorTests: XCTestCase {
     
     func testDiscoverSets() {
         let sd = SetGame()
-        sd.setTableSet(testTableSet)
-        XCTAssertEqual(sd.discoverSetsOnTable(), expectedDiscoveredSets)
+        XCTAssertEqual(sd.discoverSetsOnTable(testTableSet), expectedDiscoveredSets)
     }
     
     func testSetGameDeal() {
-        let sd = SetGame()
+        var sd = SetGame()
         sd.deal()
         XCTAssertEqual(sd.deck.count, 81-12)
         XCTAssertEqual(sd.tableSet.count, 12)
