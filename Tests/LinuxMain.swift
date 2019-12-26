@@ -1,7 +1,7 @@
 import XCTest
 
-import SetDetectorTests
+import SetGameTests
 
 var tests = [XCTestCaseEntry]()
-tests += SetDetectorTests.allTests()
+tests += SetGameTests.allTests()
 XCTMain(tests)
