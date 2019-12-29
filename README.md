@@ -2,6 +2,18 @@
 
 Based on the rules of the card game Set, this package discovers sets within a collection of cards.
 
+### Installation
+
+Add a dependency to the package in your `Packge.swift` file: 
+
+```
+dependencies: [
+    .package(url: "https://github.com/martco/SetDetective.git", from: "1.0.2")
+],
+```
+
+Run `swift build`
+
 ### About
 
 Each card is represented as an array of 4 strings, with each element of the array referring to a different feature of the card.
@@ -28,6 +40,8 @@ For `cards` above, `SetDetective().discoverSets(cards)` will return an array con
 
 ```
 import SetDetective
+
+.... 
 
 // each element in the array represents the features in a set card
 let testTableSet = [
