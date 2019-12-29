@@ -1,5 +1,5 @@
-struct SetDetective {
-    func isSet(_ cards: [[String]]) -> Bool {
+public struct SetDetective {
+    public func isSet(_ cards: [[String]]) -> Bool {
         let features = [
             cards.map({$0[0]}),
             cards.map({$0[1]}),
@@ -11,7 +11,7 @@ struct SetDetective {
         }
     }
     
-    func discoverSets(_ cards : [[String]]) -> [[[String]]] {
+    public func discoverSets(_ cards : [[String]]) -> [[[String]]] {
         var discoveredSets : [[[String]]] = []
         
         for i in 0..<cards.count - 2 {
