@@ -1,6 +1,6 @@
-# SetDetector
+# SetDetective
 
-Based on the rules of the card game Set, this package identifies if sets of cards meet the qualifications of a Set.
+Based on the rules of the card game Set, this package discovers sets within a collection of cards.
 
 ### About
 
@@ -27,7 +27,7 @@ let cards = [
 For `cards` above, `SetDetective().discoverSets(cards)` will return an array containing those cards. `SetDetective` can take an arbitrary number of cards and use them to detect sets. The exampe below shows a full set of 12 cards.
 
 ```
-import SetDetector
+import SetDetective
 
 // each element in the array represents the features in a set card
 let testTableSet = [
@@ -48,5 +48,5 @@ let testTableSet = [
   ["purple","striped","one","diamonds"],
 ]
 
-SetDetector().discoverSets(testTableSet)  // returns the 6 sets 
+SetDetective().discoverSets(testTableSet)  // returns the 6 sets 
 ```

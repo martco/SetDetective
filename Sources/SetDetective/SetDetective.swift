@@ -1,4 +1,4 @@
-struct SetDetector {
+struct SetDetective {
     func isSet(_ cards: [[String]]) -> Bool {
         let features = [
             cards.map({$0[0]}),

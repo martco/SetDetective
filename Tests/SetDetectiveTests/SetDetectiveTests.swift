@@ -1,5 +1,5 @@
 import XCTest
-@testable import SetDetector
+@testable import SetDetective
 
 // example from the box of the board game
 let testTableSet = [
@@ -60,10 +60,10 @@ let testSmallSet = [
   ["one", "purple", "solid", "ovals"]
 ]
 
-final class SetDetectorTests: XCTestCase {
+final class SetDetectiveTests: XCTestCase {
 
     func testInitialDeck() {
-        let deck = SetDetector().populateDeck()
+        let deck = SetDetective().populateDeck()
         
         print(deck)
         
@@ -72,7 +72,7 @@ final class SetDetectorTests: XCTestCase {
     }
     
     func testSmallerTableSets() {
-        let sd = SetDetector()
+        let sd = SetDetective()
 
         XCTAssertEqual(sd.discoverSets(testSmallSet), [testSmallSet])
     }
@@ -97,7 +97,7 @@ final class SetDetectorTests: XCTestCase {
         ]
 
         areSets.forEach {
-            XCTAssertEqual(SetDetector().isSet($0), true)
+            XCTAssertEqual(SetDetective().isSet($0), true)
         }
 
     }
@@ -110,12 +110,12 @@ final class SetDetectorTests: XCTestCase {
         ]]
 
         areNotSets.forEach {
-            XCTAssertEqual(SetDetector().isSet($0), false)
+            XCTAssertEqual(SetDetective().isSet($0), false)
         }
     }
     
     func testDiscoverSetsOnTable() {
-        let sd = SetDetector()
+        let sd = SetDetective()
         XCTAssertEqual(sd.discoverSets(testTableSet), expectedDiscoveredSets)
     }
 

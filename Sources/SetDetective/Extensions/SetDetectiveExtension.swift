@@ -5,7 +5,7 @@
 //  Created by Martin Cortez on 12/25/19.
 //
 
-extension SetDetector {
+extension SetDetective {
     
     func populateDeck() -> [[String]]{
         var deck : [[String]] = []
