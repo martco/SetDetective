@@ -61,15 +61,6 @@ let testSmallSet = [
 ]
 
 final class SetDetectiveTests: XCTestCase {
-
-    func testInitialDeck() {
-        let deck = SetDetective().populateDeck()
-        
-        print(deck)
-        
-        XCTAssertEqual(deck.first, ["one", "red", "solid", "squiggles"])
-        XCTAssertEqual(deck.last, ["three", "green", "outlined", "ovals"])
-    }
     
     func testSmallerTableSets() {
         let sd = SetDetective()
@@ -124,6 +115,5 @@ final class SetDetectiveTests: XCTestCase {
         ("testIsNotSet", testIsNotSet),
         ("testDiscoverSetsOnTable", testDiscoverSetsOnTable),
         ("testSmallerTableSets", testSmallerTableSets),
-        ("testInitialDeck", testInitialDeck)
     ]
 }
