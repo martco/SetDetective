@@ -53,11 +53,21 @@ let expectedDiscoveredSets = [
        ["red", "outlined", "three", "ovals"] ,
     ],
 ]
-
+let testSmallSet = [
+  ["one", "red", "solid", "ovals"],
+  ["one", "green", "solid", "ovals"],
+  ["one", "purple", "solid", "ovals"]
+]
 
 
 final class SetDetectorTests: XCTestCase {
 
+    func testSmallerTableSets() {
+        let sd = SetDetector()
+
+        XCTAssertEqual(sd.discoverSets(testSmallSet), [testSmallSet])
+    }
+    
     func testIsSet() {
         let areSets = [
             [
@@ -103,6 +113,7 @@ final class SetDetectorTests: XCTestCase {
     static var allTests = [
         ("testIsSet", testIsSet),
         ("testIsNotSet", testIsNotSet),
-        ("testDiscoverSetsOnTable", testDiscoverSetsOnTable)
+        ("testDiscoverSetsOnTable", testDiscoverSetsOnTable),
+        ("testSmallerTableSets", testSmallerTableSets),
     ]
 }
